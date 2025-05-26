@@ -1,0 +1,15 @@
+{
+  "name": "error-log-reporter",
+  "version": "1.0.0",
+  "description": "A JavaScript library for reporting network errors.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Rares Beltechi",
+  "license": "ISC",
+  "devDependencies": {
+    "html2canvas": "^1.4.1"
+  }
+}
