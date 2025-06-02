@@ -25,14 +25,9 @@ class ErrorReporter {
 
     this.logic = new ErrorReporterLogic(this.options);
     this.modalUI = new ModalUI(this.logic);
-    this.recordingControlsUI = new RecordingControlsUI(
-      this.logic,
-      this.modalUI
-    );
     this.floatingButtonUI = new FloatingButtonUI(
       this.logic,
-      this.modalUI,
-      this.recordingControlsUI
+      this.modalUI
     );
 
     ErrorReporter.instance = this;

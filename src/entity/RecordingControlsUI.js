@@ -1,10 +1,11 @@
 import { log } from "./utils.js";
-import { enableNetworkIcon, generateButton } from "../feedbackHTML.js";
+import { generateButton } from "../feedbackHTML.js";
 
 export class RecordingControlsUI {
-  constructor(logic, modalUI) {
+  constructor(logic, modalUI, floatingButtonPosition) {
     this.logic = logic;
     this.modalUI = modalUI;
+    this.floatingButtonPosition = floatingButtonPosition;
     this.recordingDiv = null;
     this.startRecordingBtn = null;
     this.issueScreenshotDiv = null;
@@ -257,6 +258,13 @@ export class RecordingControlsUI {
       log("Screenshot capture failed:", error);
       throw error;
     }
+  }
+
+  updatePosition(position) {
+    this.floatingButtonPosition = position;
+    this.recordingDiv.style.right = `${position.right}px`;
+    this.issueScreenshotDiv.style.right = `${position.right}px`;
+    this.toggleNetworkDiv.style.right = `${position.right}px`;
   }
 }
 

@@ -1,4 +1,4 @@
-import { ErrorType, log } from "./utils.js";
+import { log } from "./utils.js";
 import { NetworkService } from "./NetworkService.js";
 
 export class ErrorReporterLogic {

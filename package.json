@@ -1,12 +1,22 @@
 {
   "name": "error-log-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JavaScript library for reporting network errors.",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
     "test": ""
   },
+  "keywords": [
+    "error",
+    "reporter",
+    "network",
+    "logging",
+    "sisos",
+    "video recording",
+    "image capture",
+    "create redmine issue"
+  ],
   "author": "Rares Beltechi",
   "license": "ISC",
   "devDependencies": {
