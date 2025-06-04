@@ -1,11 +1,22 @@
 {
   "name": "error-log-reporter",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A JavaScript library for reporting network errors.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
   "type": "module",
   "scripts": {
-    "test": ""
+    "build": "babel src --out-dir dist --extensions .js",
+    "clean": "rmdir /s /q dist"
   },
   "keywords": [
     "error",
@@ -20,6 +31,9 @@
   "author": "Rares Beltechi",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
     "html2canvas": "^1.4.1"
   }
 }
